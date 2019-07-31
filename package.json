@@ -1,0 +1,22 @@
+{
+  "name": "tasky",
+  "version": "1.0.0",
+  "description": "Make Tasks!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bacon-salad/tasky.git"
+  },
+  "keywords": [
+    "TaskManager"
+  ],
+  "author": "Devon Allon Andy Cameron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bacon-salad/tasky/issues"
+  },
+  "homepage": "https://github.com/bacon-salad/tasky#readme"
+}
