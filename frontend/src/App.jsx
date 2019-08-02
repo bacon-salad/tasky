@@ -1,17 +1,14 @@
 import React from 'react';
-
 import {Component} from 'react';
 import {Route} from 'react-router-dom'
 import './App.css';
 import button from './button'
 import axios from 'axios'
 import FORM from './components/signinform/form'
-
 import Login from './components/loginForm/login'
 import SignUp from './components/signUpForm' 
 import SignIn from './components/signInForm'
-
-import sidebar from './components/sidebar/sidebar'
+import Banner from './components/banner/banner'
 
 
 class App extends Component{
@@ -31,7 +28,8 @@ componentDidMount = () => {
         </div>
         <div className='hewwo' style={loginStyle}>
           <button onClick={button}>Hewwo</button>
-          <FORM />
+          <Route exact path = "/" component={SignIn}/>
+          <Route exact path = "/signUp" component={SignUp}/>
         </div>
       </div>
     );
