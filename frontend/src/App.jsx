@@ -1,10 +1,13 @@
 import React from 'react';
 import {Component} from 'react';
+import {Route} from 'react-router-dom'
 import './App.css';
 import button from './button'
 import axios from 'axios'
 import FORM from './components/signinform/form'
 import Login from './components/loginForm/login'
+import SignUp from './components/signUpForm' 
+import SignIn from './components/signInForm'
 
 class App extends Component{
 componentDidMount = () => {
@@ -17,9 +20,8 @@ componentDidMount = () => {
     }
   return (
     <div className='hewwo'style={loginStyle}>
-    <button>Hewwo</button>
-    <FORM/>
-    <Login/>
+    <Route exact path="/" component={SignUp}/>
+    <Route exact path="/signIn" component={SignIn}/>
     </div>
   );
 }}
