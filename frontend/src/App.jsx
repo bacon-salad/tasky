@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {Component} from 'react';
 import {Route} from 'react-router-dom'
 import './App.css';
@@ -20,14 +21,22 @@ componentDidMount = () => {
   render (){
     const loginStyle = {
       backgroundColor: '#2a2a2a',
-      minHeight:'100vh'
+      minHeight: '100vh'
     }
-  return (
-    <div className='hewwo'style={loginStyle}>
-    <Route exact path="/" component={SignUp}/>
-    <Route exact path="/signIn" component={SignIn}/>
-    </div>
-  );
-}}
+
+    return (
+      <div className='container'>
+        <div className='banner'>
+          <Banner />
+        </div>
+        <div className='hewwo' style={loginStyle}>
+          <button onClick={button}>Hewwo</button>
+          <FORM />
+        </div>
+      </div>
+    );
+  }
+}
+
 
 export default App;
