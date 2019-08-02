@@ -1,19 +1,22 @@
 module.exports = function (sequelize, DataTypes) {
     var relationships = sequelize.define("relationships", {
         id: {
-            type: DataType.integer(32),
-            allowNull: false
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true
         },
         MajorId: {
-            type: DataType.integer(32),
+            type: DataTypes.INTEGER,
             allowNull: false
         },//foreign
         MinorId: {
-            type: DataType.integer(32),
+            type: DataTypes.INTEGER,
             allowNull: false
         },//foreign
         TimeStamp: {
-            type: DataType.date(),
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },//CURRENT_TIMESTAMP
     });

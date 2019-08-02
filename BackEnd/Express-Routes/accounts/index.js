@@ -3,7 +3,7 @@ var routes = express.Router()
 var pull = require('./pull')
 
 
-routes.get('/pull', pull)
+routes.post('/pull', pull)
 
 
 

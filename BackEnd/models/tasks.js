@@ -1,43 +1,46 @@
 module.exports = function (sequelize, DataTypes) {
     var tasks = sequelize.define("tasks", {
         id: {
-            type: DataTypes.integer(30),
-            allowNull: false
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true
         },
         head: {
-            type: DataTypes.varchar(30),
+            type: DataTypes.STRING,
             allowNull: false
         },
         body: {
-            type: DataTypes.varchar(255),
+            type: DataTypes.STRING,
             allowNull: false
         },
         taskeeId: {
-            type: DataTypes.integer(30),
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         //Nforeign
         TaskMasterId: {
-            type: DataTypes.integer(30),
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         //foreign
         completed: {
-            type: DataTypes.enum('notYet', 'yes', 'no'),
+            type: DataTypes.ENUM('notYet', 'yes', 'no'),
             allowNull: false,
             defaultValue: 'notYet'
         },
         DateMade: {
-            type: DataTypes.date(),
+            type: 'TIMESTAMP',
+            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
             allowNull: false
         },
         //CURRENT_TIMESTAMP
         DateDone: {
-            type: DataTypes.date(),
+            type: DataTypes.DATE,
             allowNull: false
         },
         timeleft: {
-            type: DataTypes.integer(),
+            type: DataTypes.INTEGER,
             allowNull: false
         }
     });
