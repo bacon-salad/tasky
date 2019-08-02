@@ -28,7 +28,8 @@ componentDidMount = () => {
         </div>
         <div className='hewwo' style={loginStyle}>
           <button onClick={button}>Hewwo</button>
-          <SignUp/>
+          <Route exact path = "/" component={SignIn}/>
+          <Route exact path = "/signUp" component={SignUp}/>
         </div>
       </div>
     );
