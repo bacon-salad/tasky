@@ -1,9 +1,9 @@
-import React from 'react';
-import {Component} from 'react';
-import '../../App.css'
-import axios from 'axios'
+// import React from 'react';
+// import {Component} from 'react';
+// import '../../App.css'
+// import axios from 'axios'
 
-class App extends Component{
+// class App extends Component{
 
     state = {
         name: null,
@@ -36,4 +36,3 @@ email: email
   );
 }}
 
-export default App;
