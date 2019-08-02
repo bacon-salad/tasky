@@ -3,6 +3,10 @@ html body {
   height: 100%
 }
 
+
+.Banner{
+  width: 100%;
+=======
 .grid {
     display: grid;
     grid-template-columns: 1fr 300px 700px 1fr;
@@ -47,4 +51,5 @@ html body {
         "footer footer";
         grid-gap: 1px;
     } 
+
 }
