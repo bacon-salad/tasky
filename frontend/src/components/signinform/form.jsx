@@ -19,7 +19,7 @@ titsandass = (name, password, email) => {
   else if (!name) {alert('thats not a name ya fucking idiot')}
   else if (!password){alert('theres no password ya fucking idiot')}
   else if (!email){alert('What the fuck are you doing theres not an email. Do you even WANT an account?')}
-  axios.post('http://localhost:8080/api/accounts/signUp', 
+  axios.post('/api/accounts/signUp', 
 {
 name: name,
 password: password,

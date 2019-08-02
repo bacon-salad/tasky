@@ -8,7 +8,7 @@ import Login from './components/loginForm/login'
 
 class App extends Component{
 componentDidMount = () => {
-  axios.get('http://localhost:8080/api/accounts/check')
+  axios.get('/api/accounts/check')
 }
   render (){
     const loginStyle = {

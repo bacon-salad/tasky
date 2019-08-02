@@ -12,7 +12,7 @@ class App extends Component{
 
 
 titsandass = (password, email) => {
-axios.post('http://localhost:8080/api/accounts/login', 
+axios.post('/api/accounts/login', 
 {
 password: password,
 email: email
