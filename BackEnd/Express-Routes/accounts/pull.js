@@ -1,5 +1,5 @@
-module.exports = () => {
-
-    console.log('it worked')
+module.exports = (req, res) => {
+    var name = req.body
+    console.log(name)
     
 }

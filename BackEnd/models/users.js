@@ -1,40 +1,47 @@
 module.exports = function (sequelize, DataTypes) {
     var users = sequelize.define("users", {
         id: {
-            type: DataTypes.integer(10),
-            allowNull: false
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement: true,
+            created_at: {
+                type: 'TIMESTAMP',
+                defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+                allowNull: false
+              },
+              updated_at: {
+                type: 'TIMESTAMP',
+                defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+                allowNull: false
+              }
         },
         //foreign
         TMid: {
-            type: DataTypes.integer(10),
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         Name: {
-            type: DataTypes.varchar(30),
+            type: DataTypes.STRING,
             allowNull: false
         },
         password: {
-            type: DataTypes.varchar(30),
+            type: DataTypes.STRING,
             allowNull: false
         },
         email: {
-            type: DataTypes.varchar(30),
+            type: DataTypes.STRING,
             allowNull: false
         },
         phone: {
-            type: DataTypes.varchar(13),
+            type: DataTypes.STRING,
             allowNull: false
         },
         taskmaster: {
-            type: DataTypes.boolean(),
+            type: DataTypes.BOOLEAN,
             allowNull: false,
-            defaultValue: ''
+            defaultValue: false
         },
-        //CURRENT_TIMESTAMP
-        TimeStamp: {
-            type: DataTypes.boolean(),
-            allowNull: false
-        }
     });
     return users;
   };

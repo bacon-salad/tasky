@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/bacon-salad/tasky#readme",
   "dependencies": {
-    "concurrently": "^4.1.1"
+    "concurrently": "^4.1.1",
+    "cors": "^2.8.5",
+    "mysql2": "^1.6.5",
+    "sequelize": "^5.12.2"
   }
 }

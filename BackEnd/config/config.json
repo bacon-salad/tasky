@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "Jakeybear5!",
-    "database": "database_development",
+    "password": "Jakeybear5",
+    "database": "tasky_db",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
