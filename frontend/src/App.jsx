@@ -4,6 +4,7 @@ import './App.css';
 import button from './button'
 import axios from 'axios'
 import FORM from './components/signinform/form'
+import sidebar from './components/sidebar/sidebar'
 
 class App extends Component{
 componentDidMount = () => {
