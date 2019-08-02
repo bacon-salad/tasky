@@ -21,10 +21,13 @@
   },
   "homepage": "https://github.com/bacon-salad/tasky#readme",
   "dependencies": {
+    "bcrypt": "^3.0.6",
+    "bcrypt-nodejs": "0.0.3",
     "concurrently": "^4.1.1",
     "cors": "^2.8.5",
     "mysql2": "^1.6.5",
     "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "sequelize": "^5.12.2"
   }
 }
