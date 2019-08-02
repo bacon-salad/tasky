@@ -4,14 +4,11 @@ import './App.css';
 import button from './button'
 import axios from 'axios'
 import FORM from './components/signinform/form'
+import Login from './components/loginForm/login'
 
 class App extends Component{
 componentDidMount = () => {
-  axios.post('http://localhost:8080/api/accounts/pull').then(
-    ()=>{
-      alert('fuck you')
-      }
-    )
+  axios.get('http://localhost:8080/api/accounts/check')
 }
   render (){
     const loginStyle = {
@@ -20,8 +17,9 @@ componentDidMount = () => {
     }
   return (
     <div className='hewwo'style={loginStyle}>
-    <button onClick={button}>Hewwo</button>
+    <button>Hewwo</button>
     <FORM/>
+    <Login/>
     </div>
   );
 }}
