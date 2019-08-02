@@ -6,11 +6,15 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 ReactDOM.render(
-    <div>
+
+<div>
 <Router>
 <Route path="/" component={App}/>
 </Router>
 </div>,
+
+
+
 document.getElementById('root')
 );
 
