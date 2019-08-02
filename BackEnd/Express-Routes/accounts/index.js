@@ -1,10 +1,11 @@
 var express = require('express')
 var routes = express.Router()
-var pull = require('./pull')
+//var login = require('./login')
+var passport = require('../passport')
+var signUp = require('./signUp')
 
-
-routes.post('/pull', pull)
-
+routes.post('/signup', signUp)
+//routes.post('/login', passport.authenticate("local"), login)
 
 
 
