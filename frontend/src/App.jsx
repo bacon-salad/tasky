@@ -1,7 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import './App.css';
-
+import Sidebar from './components/sidebar/sidebar'
 import Banner from './components/banner/banner';
 import button from './button';
 import axios from 'axios';
@@ -25,6 +25,9 @@ class App extends Component {
       <div className='container'>
         <div className='banner'>
           <Banner />
+        </div>
+        <div className='banner'>
+          <Sidebar />
         </div>
         <div className='hewwo' style={loginStyle}>
           <button onClick={button}>Hewwo</button>
