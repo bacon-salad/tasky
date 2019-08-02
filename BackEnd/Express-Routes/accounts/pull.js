@@ -1,9 +1,3 @@
-module.exports = (req, res) => {
-    var name = req.body
-    console.log(name)
-    
-}
-
 var passport = require("passport");
 var LocalStrategy = require("passport-local").Strategy;
 
