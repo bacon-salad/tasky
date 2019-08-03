@@ -19,7 +19,7 @@ name: name,
 password: password,
 email: email
 }).then(()=>console.log('hello'))}
-  render (){
+  render () {
     const form = {
       width: '50%',
       backgroundColor: 'black',
@@ -34,5 +34,5 @@ email: email
         <button onClick={() => this.titsandass(this.state.name, this.state.password, this.state.email)}>push</button>
     </div>
   );
-}}
+  }
 
