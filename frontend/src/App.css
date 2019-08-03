@@ -36,6 +36,7 @@ html body {
 
 
 .content {
+  width: 100vw; 
   grid-area: con;
 }
 
@@ -57,4 +58,120 @@ html body {
 <<<<<<< HEAD
 >>>>>>> origin/gh-pages
 }*/
+
+
+
+#mainContent {
+  width: 65vw;
+  height: 33em;
+  position: absolute;
+  right: 62px;
+  top: 125px;
+  overflow-x:auto;
+  margin-top:15px;
+}
+
+#cardBox {
+width:20em;
+margin-left: 50px;
+margin-top: 50px;
+float: left;
+}
+#companyCard {
+  width:30em;
+  margin-right: 50px;
+  margin-top: 50px;
+  float: right;
+}
+
+#topButton {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#contactCard {
+  width: 700px;
+
+}
+
+#signInBut {
+  text-decoration: none;
+  color: white
+}
+
+#signInButCont {
+  background-color: gray;
+  width: 100px;
+  height: 40px;
+  border-radius: 15px;
+  display: flex;
+  float: right;
+  margin-right: 64px;
+  margin-bottom: 34px;
+}
+
+.websites {
+  overflow-x: auto
+}
+
+.main {
+  background: black;
+  min-height: 100vh;
+  position: absolute;
+}
+
+.navbar {
+  width: 100vw;
+  height: 17vh;
+  background-color: #202020;
+  overflow: hidden;
+  position: relative;
+  border-bottom: .5px solid #565555
+}
+
+.sideBar {
+  height: 100vh;
+  width: 19vw;
+  margin-right: 10vw;
+  margin-top: -7vh;
+  margin-bottom: 20vh;
+  margin-left: 7vw;
+  background-color: #FF6633;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.buttons:hover {
+  background-color: gray
+}
+
+.buttons {
+  width:93%;
+  height: 30px;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.buttons:visited {
+  text-decoration: none;
+  color: white
+}
+
+#links {
+  color: #404040;
+  text-decoration: none
+}
+
+#links:visited {
+  color: #404040;
+  text-decoration: none
+}
+
+::-webkit-scrollbar { width: 0 !important }
 
