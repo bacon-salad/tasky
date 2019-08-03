@@ -1,0 +1,161 @@
+html body {
+  margin:0;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #2a2a2a
+
+}
+
+
+.Banner{
+  width: 100%;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 300px 700px 1fr;
+    grid-template-rows: 6fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". banner banner ."
+    ". sidebar con ."
+    ". sidebar con .";
+    grid-gap: 2px;
+}
+
+.grid {
+  background-color: blue;
+}
+
+.banner {
+  grid-area: banner;
+  
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+
+.content {
+  width: 100vw; 
+  grid-area: con;
+}
+
+
+/* @media screen and (min-width: 736px) 
+{
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "title title"
+        "header header"
+        "sidebar sidebar"
+        "content content"
+        "footer footer";
+        grid-gap: 1px;
+    } 
+<<<<<<< HEAD
+>>>>>>> origin/gh-pages
+}*/
+
+
+
+#mainContent {
+  width: 65vw;
+  height: 33em;
+  position: absolute;
+  right: 62px;
+  top: 125px;
+  overflow-x:auto;
+  margin-top:15px;
+}
+
+#cardBox {
+width:20em;
+margin-left: 50px;
+margin-top: 50px;
+float: left;
+}
+#companyCard {
+  width:30em;
+  margin-right: 50px;
+  margin-top: 50px;
+  float: right;
+}
+
+#topButton {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#contactCard {
+  width: 700px;
+
+}
+
+.websites {
+  overflow-x: auto
+}
+
+.main {
+  background: black;
+  min-height: 100vh;
+  position: absolute;
+}
+
+.navbar {
+  width: 100vw;
+  height: 17vh;
+  background-color: #202020;
+  overflow: hidden;
+  position: relative;
+  border-bottom: .5px solid #565555
+}
+
+.sideBar {
+  height: 100vh;
+  width: 19vw;
+  margin-right: 10vw;
+  margin-top: -7vh;
+  margin-bottom: 20vh;
+  margin-left: 7vw;
+  background-color: #FF6633;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.buttons:hover {
+  background-color: gray
+}
+
+.buttons {
+  width:93%;
+  height: 30px;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.buttons:visited {
+  text-decoration: none;
+  color: white
+}
+
+#links {
+  color: #404040;
+  text-decoration: none
+}
+
+#links:visited {
+  color: #404040;
+  text-decoration: none
+}
+
+::-webkit-scrollbar { width: 0 !important }
+
