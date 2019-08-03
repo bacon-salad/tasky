@@ -7,9 +7,10 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 ReactDOM.render(
 
-    <div>
+<div>
 <Router>
 <Route path="/" component={App}/>
+<Route path="/home" component={home}/>
 </Router>
 </div>,
 
