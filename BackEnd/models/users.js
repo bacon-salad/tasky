@@ -21,8 +21,7 @@ module.exports = function (sequelize, DataTypes) {
         //foreign
         TMid: {
             type: DataTypes.INTEGER,
-            allowNull: false,
-            autoIncrement: true
+            allowNull: false
         },
         Name: {
             type: DataTypes.STRING,

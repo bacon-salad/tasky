@@ -15,21 +15,25 @@ passport.use(new LocalStrategy(
       where: {
         email: email
       }
-    }).then(function(dbUser) {
+    }).then(function(dbusers) {
       // If there's no user with the given email
       if (!dbusers) {
+          console.log('1')
         return done(null, false, {
           message: "Incorrect email."
         });
       }
       // If there is a user with the given email, but the password the user gives us is incorrect
       else if (!dbusers.validPassword(password)) {
+          console.log('2')
         return done(null, false, {
           message: "Incorrect password."
         });
       }
       // If none of the above, return the user
+      console.log('3')
       return done(null, dbusers);
+      
     });
   }
 ));
@@ -37,8 +41,8 @@ passport.use(new LocalStrategy(
 // In order to help keep authentication state across HTTP requests,
 // Sequelize needs to serialize and deserialize the user
 // Just consider this part boilerplate needed to make it all work
-passport.serializeUser(function(users, cb) {
-  cb(null, users);
+passport.serializeUser(function(user, cb) {
+  cb(null, user);
 });
 
 passport.deserializeUser(function(obj, cb) {
