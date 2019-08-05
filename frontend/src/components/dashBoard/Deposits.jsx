@@ -19,7 +19,7 @@ class Status extends Component{
   }
   componentDidMount(){
 axios.get('/api/accounts/getUserInfo')
- .then((res) => console.log(res.email))
+ .then((res) => console.log(res.data.email))
 }
 
 
@@ -36,7 +36,7 @@ axios.get('/api/accounts/getUserInfo')
         progress [---------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]
       </Typography>
       <div>
-        <Link onClick={console.log(dat)}color="primary" href="javascript:;">
+        <Link to="/home" onClick={console.log(dat)}color="primary" href="javascript:;">
           View Badges
         </Link>
       </div>

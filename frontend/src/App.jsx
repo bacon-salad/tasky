@@ -2,13 +2,9 @@ import React from 'react';
 import {Component} from 'react';
 import {Route} from 'react-router-dom'
 import './App.css';
-import button from './button'
 import axios from 'axios'
-import FORM from './components/signinform/form'
-import Login from './components/loginForm/login'
-import SignUp from './components/signUpForm' 
-import SignIn from './components/signInForm'
-import Banner from './components/banner/banner'
+import SignUp from './components/signinform/signUpForm' 
+import SignIn from './components/signinform/signInForm'
 
 
 class App extends Component{

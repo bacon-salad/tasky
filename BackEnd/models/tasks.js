@@ -4,7 +4,17 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autoIncrement: true
+            autoIncrement: true,
+            created_at: {
+                type: 'TIMESTAMP',
+                defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+                allowNull: false
+            },
+            updated_at: {
+                type: 'TIMESTAMP',
+                defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
+                allowNull: false
+            }
         },
         head: {
             type: DataTypes.STRING,
@@ -29,15 +39,10 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false,
             defaultValue: 'notYet'
         },
-        DateMade: {
-            type: 'TIMESTAMP',
-            defaultValue: sequelize.literal('CURRENT_TIMESTAMP'),
-            allowNull: false
-        },
         //CURRENT_TIMESTAMP
         DateDone: {
             type: DataTypes.DATE,
-            allowNull: false
+            allowNull: true
         },
         timeleft: {
             type: DataTypes.INTEGER,
