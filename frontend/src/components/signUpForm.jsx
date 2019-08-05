@@ -115,18 +115,21 @@ export default function SignUp() {
               />
             </Grid>
           </Grid>
-          <Button
+          <div id="signInButCont">
+            <Link
+            to = "/home"
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
+            id='signInBut'
           >
-            Sign Up
-          </Button>
+            Sign In
+          </Link></div>
           <Grid container justify="flex-end">
             <Grid item>
-              <Link to="/" variant="body2">
+              <Link to="/forms" variant="body2">
                 Already have an account? Sign in
               </Link>
             </Grid>

@@ -45,7 +45,8 @@ const useStyles = makeStyles(theme => ({
     marginTop: theme.spacing(1),
   },
   submit: {
-    margin: theme.spacing(3, 0, 2),
+    margin: '10px 27px 15px;'
+
   },
 }));
 
@@ -88,15 +89,18 @@ export default function SignIn() {
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
           />
-          <Button
+          <div id="signInButCont">
+            <Link
+            to = "/home"
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
+            id='signInBut'
           >
             Sign In
-          </Button>
+          </Link></div>
           <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
@@ -104,7 +108,7 @@ export default function SignIn() {
               </Link>
             </Grid>
             <Grid item>
-              <Link to="/signUp" variant="body2">
+              <Link to="/forms/signUp" variant="body2">
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>
