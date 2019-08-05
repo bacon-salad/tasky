@@ -10,7 +10,7 @@ ReactDOM.render(
 
 <div>
 <Router>
-<Redirect from='/' to='/forms' />
+<Route exact path="/" render={() => <Redirect to="/forms" />} />
 <Route path="/forms" component={App}/>
 <Route path='/home' component={Dashboard}/>
 </Router>

@@ -21,6 +21,9 @@ import { mainListItems, secondaryListItems } from './listItems';
 import Chart from './Chart';
 import Deposits from './Deposits';
 import Orders from './Orders';
+import Name from './axioscalls/nameFind'
+import {Route} from 'react-router-dom'
+import MakeTask from './MakeTasks/MakeTasks'
 
 function MadeWithLove() {
   return (
@@ -141,7 +144,7 @@ export default function Dashboard() {
             <MenuIcon />
           </IconButton>
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
-            Dashboard
+            <Name/>
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
@@ -174,7 +177,8 @@ export default function Dashboard() {
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
-                <Chart />
+<Route exact path ='/home' component={Chart}/>
+<Route exact path ='/home/MakeTask' component={MakeTask}/>
               </Paper>
             </Grid>
             {/* Recent Deposits */}
