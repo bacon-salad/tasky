@@ -2,6 +2,7 @@ import React from 'react';
 import {Component} from 'react';
 import axios from 'axios';
 import Tasks from '../axioscalls/Tasks'
+import {Link} from 'react-router-dom'
 
 
 
@@ -27,7 +28,7 @@ class MakeTasks extends Component{
        myId: TaskMasterId,
        time: Days
        }).then(
-         ()=>console.log('hello'))
+         ()=>this.forceUpdate())
          }
 render(){
 
@@ -45,7 +46,7 @@ return(
         <div><h4>Days to complete</h4>
         <input onChange={(e) => this.setState({ Days: e.target.value })} type="number" placeholder="Days"/></div>
         </div>
-        <button onClick={() => this.MakeTask(this.state.head, this.state.body, this.state.userId, this.state.yourId, this.state.Days)} style={{backgroundColor:'gray', color:'white', height:'40px', marginTop: '20px'}}>Submit</button>
+        <Link to="/home" onClick={() => this.MakeTask(this.state.head, this.state.body, this.state.userId, this.state.yourId, this.state.Days)} style={{backgroundColor:'gray', color:'white', height:'40px', marginTop: '20px'}}>Submit</Link>
         <Tasks/>
     </div>
 )}}

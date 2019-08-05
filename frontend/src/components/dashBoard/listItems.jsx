@@ -13,40 +13,28 @@ import {Link} from 'react-router-dom'
 
 export const mainListItems = (
   <div>
+    <Link to='/home'>
     <ListItem button>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItem>
-    <ListItem to="/forms" button>
-      <Link to='/home/MakeTask'>Make a task</Link>
-      <ListItemText primary="Orders" />
-    </ListItem>
+    </Link>
+    <Link to='/home/MakeTask'>
     <ListItem button>
       <ListItemIcon>
-      <Link to='/home/MakeTask'><PeopleIcon /></Link>
+      <PeopleIcon />
       </ListItemIcon>
-      <ListItemText primary="Customers" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <BarChartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Reports" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <LayersIcon />
-      </ListItemIcon>
-      <ListItemText primary="Integrations" />
-    </ListItem>
+      <ListItemText primary="Tasks" />
+    </ListItem></Link>
+    
   </div>
 );
 
 export const secondaryListItems = (
   <div>
-    <ListSubheader inset>Saved reports</ListSubheader>
+    {/* <ListSubheader inset>Saved reports</ListSubheader>
     <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />
@@ -64,6 +52,6 @@ export const secondaryListItems = (
         <AssignmentIcon />
       </ListItemIcon>
       <ListItemText primary="Year-end sale" />
-    </ListItem>
+    </ListItem> */}
   </div>
 );
