@@ -9,15 +9,22 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
 
-class TaskHistory extends Component{
+class ActiveTasks extends Component{
 
     state = {
         data: []
     }
     componentDidMount(){
-        axios.get('/api/tasks/taskHistory')
+        axios.get('/api/tasks/activeTasks')
         .then(
             (res) => this.setState({data: res.data}))
+    }
+    UpdateTask(id, update){
+        axios.post('/api/tasks/finishTask', {
+            id: id,
+            update: update
+        }
+        ).then(window.location.reload())
     }
 render(){
     console.log('data' + this.state.data)
@@ -42,10 +49,11 @@ return(
               <TableCell>{row.TaskMasterId}</TableCell>
               <TableCell>{row.completed}</TableCell>
               <TableCell align="right">{row.timeleft}</TableCell>
+              <button id={row.id} onClick={() => this.UpdateTask(row.id, 'yes')}>Finish</button>
             </TableRow>
           ))}
         </TableBody>
       </Table>
 )}}
 
-export default TaskHistory
+export default ActiveTasks
