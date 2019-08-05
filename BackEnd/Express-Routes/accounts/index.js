@@ -8,7 +8,7 @@ var GUI = require('./getUserInfo')
 routes.post('/signup', signUp)
 routes.post('/login', passport.authenticate("local"), login)
 routes.get('/getUserInfo', GUI)
-
+routes.get('getAllUsers', )
 
 
 

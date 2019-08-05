@@ -106,13 +106,13 @@ email: email
           />
           <div id="signInButCont">
             <Link
+            onClick={() => this.logInFunction(this.state.password, this.state.email)}
             to = "/home"
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
             id='signInBut'
-            onClick={() => this.logInFunction(this.state.password, this.state.email)}
           >
             Sign In
           </Link></div>
