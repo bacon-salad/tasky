@@ -94,6 +94,22 @@ float: left;
 
 }
 
+#signInBut {
+  text-decoration: none;
+  color: white
+}
+
+#signInButCont {
+  background-color: gray;
+  width: 100px;
+  height: 40px;
+  border-radius: 15px;
+  display: flex;
+  float: right;
+  margin-right: 64px;
+  margin-bottom: 34px;
+}
+
 .websites {
   overflow-x: auto
 }
