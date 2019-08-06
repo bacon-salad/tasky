@@ -131,7 +131,7 @@ email: email
         </form>
       </div>
       <Box mt={5}>
-        <MadeWithLove />
+
       </Box>
     </Container>
   );
