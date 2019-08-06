@@ -14,18 +14,10 @@ const useStyles = makeStyles({
 
 class Status extends Component{
 
-  state= {
-    data:[],
-  }
-  componentDidMount(){
-axios.get('/api/accounts/getUserInfo')
- .then((res) => console.log(res.data.email))
-}
 
 
   // const classes = useStyles();
   render() {
-    var dat=this.state.data
   return (
     <React.Fragment>
       <Title>Status</Title>
@@ -36,7 +28,7 @@ axios.get('/api/accounts/getUserInfo')
         progress [---------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]
       </Typography>
       <div>
-        <Link to="/home" onClick={console.log(dat)}color="primary" href="javascript:;">
+        <Link to="/home" color="primary" href="javascript:;">
           View Badges
         </Link>
       </div>

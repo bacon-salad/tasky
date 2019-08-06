@@ -13,7 +13,7 @@ import Badge from '@material-ui/core/Badge';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Link from '@material-ui/core/Link';
+import {Link} from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
@@ -146,6 +146,7 @@ export default function Dashboard() {
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             <Name/>
           </Typography>
+          <Link to="/forms" style={{float:'right', color:'white', backgroundColor: 'black', borderRadius: '12px', width: '100px', height: '20px', textAlign: 'center', textDecoration: 'none'}}>Sign Out</Link>
           {/* <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />
@@ -195,7 +196,6 @@ export default function Dashboard() {
             </Grid>
           </Grid>
         </Container>
-        <MadeWithLove />
       </main>
     </div>
   );
