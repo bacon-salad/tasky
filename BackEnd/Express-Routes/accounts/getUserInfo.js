@@ -6,7 +6,8 @@ module.exports = (req, res) => {
     console.log(req.user.userName)
      res.json({
         email: req.user.email,
-        userName: req.user.userName
+        userName: req.user.userName,
+        id: req.user.id,
+        taskMaster: req.user.taskmaster
       });
-      console.log(res)
 }

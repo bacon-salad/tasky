@@ -1,7 +1,6 @@
 import React from 'react';
 import {Component} from 'react';
 import axios from 'axios';
-import { log } from 'util';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
