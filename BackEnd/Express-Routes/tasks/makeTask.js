@@ -5,7 +5,7 @@ module.exports = (req, res) => {
         head: req.body.head,
         body: req.body.body,
         taskeeId: req.body.toid,
-        TaskMasterId: req.body.myId,
+        TaskMasterId: req.user.id,
         timeleft: req.body.time,
       }).then(function() {
           console.log('User Info: ' + req.body)

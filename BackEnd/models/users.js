@@ -21,7 +21,8 @@ module.exports = function (sequelize, DataTypes) {
         //foreign
         TMid: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true,
+            defaultValue: null
         },
         firstName: {
             type: DataTypes.STRING,
@@ -56,6 +57,11 @@ module.exports = function (sequelize, DataTypes) {
                 allowNull: false,
                 defaultValue: false
             },
+        tasksComplete: {
+                type: DataTypes.INTEGER,
+                allowNull: true,
+                defaultValue: 0
+        }
         });
 
     // Creating a custom method for our User model. This will check if an unhashed password entered by the users can be compared to the hashed password stored in our database
