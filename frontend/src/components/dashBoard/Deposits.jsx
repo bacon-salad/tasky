@@ -1,31 +1,25 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Title from './Title';
 import axios from 'axios';
 import {Component} from 'react'
 
-const useStyles = makeStyles({
-  depositContext: {
-    flex: 1,
-  },
-});
+
 
 class Status extends Component{
-
-  state= {
-    data:[],
-  }
   componentDidMount(){
-axios.get('/api/accounts/getUserInfo')
- .then((res) => console.log(res.data.email))
-}
-
+    axios.get('/api/accounts/tasksComplete').then(
+      (res) => {this.setState({tasksComplete: res.data.tasksComplete})}
+    )
+  }
+  state = {
+    tasksComplete: null
+  }
 
   // const classes = useStyles();
   render() {
-    var dat=this.state.data
+    
   return (
     <React.Fragment>
       <Title>Status</Title>
@@ -33,10 +27,10 @@ axios.get('/api/accounts/getUserInfo')
         Level 3
       </Typography>
       <Typography color="textSecondary" >
-        progress [---------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]
+        progress {this.state.tasksComplete}
       </Typography>
       <div>
-        <Link to="/home" onClick={console.log(dat)}color="primary" href="javascript:;">
+        <Link to="/home" color="primary" href="javascript:;">
           View Badges
         </Link>
       </div>

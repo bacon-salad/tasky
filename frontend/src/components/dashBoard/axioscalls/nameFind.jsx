@@ -6,17 +6,18 @@ import axios from 'axios';
 class Name extends Component{
 
     state = {
-        data: []
+        data: [],
+        email: null,
     }
     componentDidMount(){
         axios.get('/api/accounts/getUserInfo')
-        .then((res) => this.setState({ data: res.data }))
+        .then((res) => this.setState({ email: res.data.email }))
     }
 render(){
     console.log(this.state.data)
 return(
     <div>
-        <h3>{this.state.data.email}</h3>
+        <h3>{this.state.email}</h3>
     </div>
 )
 }

@@ -60,14 +60,14 @@ class SignUp extends Component{
          password: null,
          email: null
      }
- titsandass = (firstName, lastName, userName, password, email) => {
+ signup = (firstName, lastName, userName, password, email) => {
   //  if (!name && !password){alert('how the fuck are you going to make an account without a name or password. What are you dumb?')}
   //  else if (!name && !email){alert('no name or email? Guess your not serious about this fuck you then.')}
   //  else if (!email && !password){alert('what are you gonna sign in with? Just a fucking name? Are you STUPID?')}
   //  else if (!name) {alert('thats not a name ya fucking idiot')}
   //  else if (!password){alert('theres no password ya fucking idiot')}
   //  else if (!email){alert('What the fuck are you doing theres not an email. Do you even WANT an account?')}
-   axios.post('http://localhost:8080/api/accounts/signUp', 
+   axios.post('/api/accounts/signUp', 
  {
  firstName: firstName,
  lastName: lastName,
@@ -162,14 +162,14 @@ class SignUp extends Component{
           </Grid>
           <div id="signInButCont">
             <Link
-            to = "/home"
+            to = "/forms"
             type="submit"
             fullWidth
             variant="contained"
             color="primary"
             
             id='signInBut'
-            onClick={() => this.titsandass(this.state.firstName, this.state.lastName, this.state.userName, this.state.password, this.state.email)}
+            onClick={() => this.signup(this.state.firstName, this.state.lastName, this.state.userName, this.state.password, this.state.email)}
           >
             Sign In
           </Link></div>
@@ -183,7 +183,7 @@ class SignUp extends Component{
         </form>
       </div>
       <Box mt={5}>
-        <MadeWithLove />
+
       </Box>
     </Container>
   );

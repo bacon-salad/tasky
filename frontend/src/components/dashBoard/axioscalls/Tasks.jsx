@@ -1,12 +1,13 @@
 import React from 'react';
 import {Component} from 'react';
 import axios from 'axios';
-import { log } from 'util';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+
+import Title from '../Title';
 
 
 class TaskHistory extends Component{
@@ -23,7 +24,8 @@ render(){
     console.log('data' + this.state.data)
     var dat = this.state && this.state.data
 return(
-    
+  <div>
+  <Title>Tasks</Title>
     <Table size="small">
         <TableHead>
           <TableRow>
@@ -46,6 +48,7 @@ return(
           ))}
         </TableBody>
       </Table>
+      </div>
 )}}
 
 export default TaskHistory
