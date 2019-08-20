@@ -12,7 +12,6 @@ import IconButton from '@material-ui/core/IconButton';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import {Link} from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ListItems from './listItems';
@@ -22,7 +21,6 @@ import Orders from './Orders';
 import Name from './axioscalls/nameFind'
 import {Route} from 'react-router-dom'
 import MakeTask from './MakeTasks/MakeTasks'
-
 
 
 const drawerWidth = 240;
@@ -106,6 +104,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+
 export default function Dashboard() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
@@ -115,6 +114,7 @@ export default function Dashboard() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
   return (
     <div className={classes.root}>
@@ -133,7 +133,7 @@ export default function Dashboard() {
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             <Name/>
           </Typography>
-          <Link to="/forms" style={{float:'right', color:'white', backgroundColor: 'black', borderRadius: '12px', width: '100px', height: '20px', textAlign: 'center', textDecoration: 'none'}}>Sign Out</Link>
+          
           {/* <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
               <NotificationsIcon />

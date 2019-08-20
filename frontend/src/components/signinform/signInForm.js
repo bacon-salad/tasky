@@ -14,17 +14,7 @@ import Container from '@material-ui/core/Container';
 import axios from 'axios';
 import {Component} from 'react'
 
-function MadeWithLove() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Built with love by the '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Material-UI
-      </Link>
-      {' team.'}
-    </Typography>
-  );
-}
+
 
 
 
@@ -68,11 +58,16 @@ email: email
    render(){
     // const classes = useStyles();
   return (
-    <Container style={{backgroundColor: 'white'}}component="main" maxWidth="xs">
+    <Container style={{backgroundColor: 'white', height: '60vh', paddingTop: '25px', borderRadius: '5px'}}component="main" maxWidth="xs">
       <CssBaseline />
       <div >
-        <Avatar >
+      <div style={{display: 'flex', justifyContent: 'space-between'}}>
+        <Avatar style={{backgroundColor: 'red', marginBottom: '10px'}}>
         </Avatar>
+        <h1>Tasky</h1>
+        <Avatar style={{backgroundColor: 'red', marginBottom: '10px'}}>
+        </Avatar>
+        </div>
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
@@ -100,11 +95,7 @@ email: email
             id="password"
             onChange={(e) => this.setState({ password: e.target.value })}
           />
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-          />
-          <div id="signInButCont">
+          <div id="signInButCont" style={{justifyContent: 'center', paddingTop: '10px', marginTop:'20px', width: '80%', marginRight:'40px'}}>
             <Link
             onClick={() => this.logInFunction(this.state.password, this.state.email)}
             to = "/home"
@@ -118,9 +109,6 @@ email: email
           </Link></div>
           <Grid container>
             <Grid item xs>
-              <Link href="#" variant="body2">
-                Forgot password?
-              </Link>
             </Grid>
             <Grid item>
               <Link to="/forms/signUp" variant="body2">

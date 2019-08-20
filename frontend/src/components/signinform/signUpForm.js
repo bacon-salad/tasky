@@ -81,12 +81,17 @@ class SignUp extends Component{
     // const }tyles()
   return (
    
-    <Container style={{backgroundColor: 'white', borderRadius: '15px'}}component="main" maxWidth="xs">
+    <Container style={{marginTop:'-10vh', backgroundColor: 'white', height: '75vh', paddingTop: '25px', borderRadius: '5px'}}component="main" maxWidth="xs">
       <CssBaseline />
       <div >
-        <Avatar >
+      <div style={{display: 'flex', justifyContent: 'space-between'}}>
+        <Avatar style={{backgroundColor: 'red', marginBottom: '10px'}}>
         </Avatar>
-        <Typography component="h1" variant="h5">
+        <h1>Tasky</h1>
+        <Avatar style={{backgroundColor: 'red', marginBottom: '10px'}}>
+        </Avatar>
+        </div>
+        <Typography component="h1" variant="h5" style={{marginBottom:'20px', textAlign:'center'}}>
           Sign up
         </Typography>
         <form noValidate>
@@ -154,13 +159,10 @@ class SignUp extends Component{
               />
             </Grid>
             <Grid item xs={12}>
-              <FormControlLabel
-                control={<Checkbox value="allowExtraEmails" color="primary" />}
-                label="I want to receive inspiration, marketing promotions and updates via email."
-              />
+
             </Grid>
           </Grid>
-          <div id="signInButCont">
+          <div id="signInButCont"  style={{justifyContent: 'center', paddingTop: '10px', width:'80%', marginRight:'40px'}}>
             <Link
             to = "/forms"
             type="submit"
@@ -171,7 +173,7 @@ class SignUp extends Component{
             id='signInBut'
             onClick={() => this.signup(this.state.firstName, this.state.lastName, this.state.userName, this.state.password, this.state.email)}
           >
-            Sign In
+            Sign Up
           </Link></div>
           <Grid container justify="flex-end">
             <Grid item>
