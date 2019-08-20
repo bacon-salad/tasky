@@ -14,7 +14,8 @@ componentDidMount = () => {
   render (){
     const loginStyle = {
       backgroundColor: '#2a2a2a',
-      minHeight: '100vh'
+      minHeight: '100vh',
+      paddingTop: '10%'
     }
 
     return (

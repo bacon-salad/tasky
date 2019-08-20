@@ -7,6 +7,7 @@ var GUI = require('./getUserInfo')
 var GAU = require('./getAllUsers.js')
 var GNA = require('./showNotTaskees')
 var TC = require('./findUserTasksComplete')
+var LO = require('./logout')
 
 
 routes.post('/signup', signUp)
@@ -15,6 +16,7 @@ routes.get('/getUserInfo', GUI)
 routes.get('/getAllUsers', GAU)
 routes.get('/getNonAssigned', GNA)
 routes.get('/tasksComplete', TC)
+routes.get('/logout', LO)
 
 
 

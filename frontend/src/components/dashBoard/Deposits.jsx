@@ -10,21 +10,34 @@ import {Component} from 'react'
 class Status extends Component{
   componentDidMount(){
     axios.get('/api/accounts/tasksComplete').then(
-      (res) => {this.setState({tasksComplete: res.data.tasksComplete})}
+      (res) => {this.setState(
+        {tasksComplete: res.data.tasksComplete}
+        )
+        }
+    ).then(
+      ()=>{
+        if(this.state.tasksComplete > 9 && this.state.tasksComplete < 20) {
+          this.setState({level: 2})}
+          else if (this.state.tasksComplete > 19 && this.state.tasksComplete < 31) {
+          this.setState({level: 3})}
+        }
     )
+
   }
+
+
   state = {
-    tasksComplete: null
+    tasksComplete: null,
+    level: 1
   }
 
   // const classes = useStyles();
   render() {
-    
   return (
     <React.Fragment>
       <Title>Status</Title>
       <Typography component="p" variant="h4">
-        Level 3
+        Level {this.state.level}
       </Typography>
       <Typography color="textSecondary" >
         progress {this.state.tasksComplete}
