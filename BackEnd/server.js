@@ -9,6 +9,7 @@ var app = express();
 var PORT = process.env.PORT || 8080;
 app.use(cors());
 var passport = require("./Express-Routes/passport");
+var expressWs = require('express-ws')(app);
 
 var db = require("./models");
 
@@ -32,7 +33,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 
-db.sequelize.sync({ force: true}).then(function() {
+db.sequelize.sync({ force: false}).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
