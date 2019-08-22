@@ -16,9 +16,13 @@ class TaskHistory extends Component{
         data: []
     }
     componentDidMount(){
-        setInterval(axios.get('/api/tasks/taskHistory')
+        setInterval(this.axiosCall, 3000)
+    }
+    axiosCall = () => {
+      console.log('hello')
+      axios.get('/api/tasks/taskHistory')
         .then(
-            (res) => this.setState({data: res.data})), 3000)
+            (res) => this.setState({data: res.data}))
     }
 render(){
     console.log('data' + this.state.data)
