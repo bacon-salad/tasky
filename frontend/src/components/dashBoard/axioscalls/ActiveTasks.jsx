@@ -14,16 +14,21 @@ class ActiveTasks extends Component{
         data: []
     }
     componentDidMount(){
-        axios.get('/api/tasks/activeTasks')
-        .then(
-            (res) => this.setState({data: res.data}))
+      setInterval(this.axiosCalls, 3000)
+    }
+    axiosCalls = () => {
+      console.log('goodbye')
+      axios.get('/api/tasks/activeTasks')
+      .then(
+          (res) => this.setState({data: res.data}))
+          this.forceUpdate()
     }
     UpdateTask(id, update){
         axios.post('/api/tasks/finishTask', {
             id: id,
             update: update
         }
-        ).then(window.location.reload())
+        )
     }
 render(){
     console.log('data' + this.state.data)

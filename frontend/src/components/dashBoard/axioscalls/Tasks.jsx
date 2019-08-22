@@ -23,7 +23,6 @@ class TaskHistory extends Component{
       axios.get('/api/tasks/taskHistory')
         .then(
             (res) => this.setState({data: res.data}))
-            this.forceUpdate()
     }
 render(){
     console.log('data' + this.state.data)
