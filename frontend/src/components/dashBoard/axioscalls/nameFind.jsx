@@ -11,7 +11,9 @@ class Name extends Component{
         email: null,
     }
     componentDidMount(){
-        setTimeout(this.getFromDb, 1000)
+        setTimeout(this.getFromDb, 10)
+        setTimeout(this.getFromDb, 500)
+        setTimeout(this.checkState, 1000)
 }
 
 getFromDb = () => {
@@ -19,6 +21,10 @@ getFromDb = () => {
     .then((res) =>{
     this.setState({email: res.data.email})
 })
+}
+
+checkState = () => {
+    if(this.state.email == 'loading...'){window.location = '/'}
 }
 
 render(){
